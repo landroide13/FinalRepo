@@ -3,7 +3,7 @@
  <% obj.each do |a|%>
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <div class="well well-lg">
+        <div class="card card-lg">
           <div class="article-title">
             <%= link_to a.title, article_path(a) %>
           </div>
@@ -15,10 +15,12 @@
                 last updated: <%= time_ago_in_words(a.updated_at) %></small>
               </div>
           </div>  
+          <% if logged_in? && current_user == a.user %>
           <div class="article-actions">
             <%= link_to 'Edit Article', edit_article_path(a), class:"btn btn-xs btn-primary" %>
             <%= link_to 'Delete', articles_path(a), class:"btn btn-xs btn-danger", method: :delete, data: {confirm:"Are you sure?"} %>
-          </div>  
+          </div> 
+          <% end %> 
         </div>
       </div>  
     </div>  
