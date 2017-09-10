@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   get 'signup' =>'users#new'
-  resources :users, except:[:new]
+  resources :users, except: [:new]
 
   root 'home#index'
   
@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  resources :categories, except: [:destroy]
   
 end
