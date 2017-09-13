@@ -5,10 +5,11 @@
   <% @categories.each do |c| %>
     <ul class="listing">
       <div class="row">
-        <div class="card-block col-md-4 offset-md-4">
-          <li class="article-title">
-            <%= link_to "#{c.name}", category_path(c) %>
+        <div class="card col-md-4 offset-md-4">
+          <li class="card-title">
+            <strong><%= link_to "#{c.name}", category_path(c) %></strong>
           </li>
+          <li><small><%= pluralize(c.articles.count, "article" ) %></small></li>
         </div>
       </div>
     </ul>
