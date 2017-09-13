@@ -22,6 +22,10 @@
             <%= link_to 'Log Out', logout_path, class:"nav-link", method: :delete%>
           </li>
 
+          <li class="nav-item active">
+            <%= link_to 'Categories', categories_path, class:"nav-link"%>
+          </li>
+
           <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Your Profile<%= 'Admin' if current_user.admin? %>
