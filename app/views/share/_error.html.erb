@@ -1,7 +1,7 @@
 
 <% if obj.errors.any? %>
   <div class="row">
-    <div class="col-md-8 offset-md-2">
+    <div class="col-md-8 offset-2">
       <div class="alert alert-danger" role="alert">
         <h2 class="alert-heading">
           <%= pluralize(obj.errors.count,'Error') %>
@@ -19,3 +19,4 @@
     </div>
   </div>        
 <% end %>
+

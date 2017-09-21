@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-  end  
+  end   
 
   def new
     @article = Article.new

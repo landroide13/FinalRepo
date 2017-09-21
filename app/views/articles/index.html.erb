@@ -1,16 +1,25 @@
 
 <h1 align="center" class="title"> The Articles App </h1>
 
-<div align="center">
-  <%= will_paginate %>
-</div>  
+<nav aria-label="Page navigation">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <%= will_paginate class:"page-link" %>
+    </li>
+  </ul> 
+</nav>   
 
-<%= render 'article' , obj: @articles %>
+  <%= render 'article' , obj: @articles %>
   
-<div align="center">
-  <%= will_paginate %>
-</div> 
+  <nav aria-label="Page navigation">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <%= will_paginate class:"page-link" %>
+    </li>
+  </ul> 
+</nav>   
 
+   
 
 
 
